@@ -8,3 +8,8 @@ class BaseException(Exception):
 
 class NotFoundException(BaseException):
     message = "Not Found"
+
+
+class InsertionException(Exception):
+    def __init__(self, message: str = "Failed to insert product") -> None:
+        super().__init__(message)
